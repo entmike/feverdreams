@@ -88,7 +88,6 @@ def redeeminvite():
 
 @blueprint.route("/generateinvite", methods=["POST"])
 @requires_auth
-@requires_vetting
 def generateinvite():
     current_user = _request_ctx_stack.top.current_user
     discord_id = int(current_user["sub"].split("|")[2])
