@@ -1,0 +1,1 @@
+{"options":{"viewOn":"queue","pipeline":[{"$project":{"_id":{"$numberInt":"0"}}},{"$unionWith":{"coll":"stable_jobs"}}]},"indexes":[],"collectionName":"unified_jobs","type":"view"}

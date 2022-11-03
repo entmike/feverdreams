@@ -1,0 +1,1 @@
+{"options":{"viewOn":"pieces","pipeline":[{"$project":{"_id":{"$numberInt":"0"}}},{"$unionWith":{"coll":"reviews"}},{"$unionWith":{"coll":"personal_pieces"}}]},"indexes":[],"collectionName":"vw_all_pieces","type":"view"}

@@ -32,25 +32,35 @@ def fn_myinfo():
                 {"$sort" : {"timestamp" : -1}},
                 {"$limit" : 1}
             ]))
+            t = None
+            agree = False
+            tosAgree = None
+
+            if len(tos)>0:
+                t = tos[0]
+            else:   # No TOS = agree, sure.
+                agree = True
+
             u = client.database.users.find_one({"user_id" : user_id})
             invites = 0
             if u:
                 invites = u.get("invites")
                 if not invites:
                     invites = 0
+            if t:
+                tosAgree = list(client.database.users.aggregate([
+                    {"$match" : {"user_id":user_id, "tos_agree" : tos[0].get("uuid")}}
+                ]))
 
-            tosAgree = list(client.database.users.aggregate([
-                {"$match" : {"user_id":user_id, "tos_agree" : tos[0].get("uuid")}}
-            ]))
-            agree = False
-            if len(tosAgree) > 0:
+            if tosAgree and len(tosAgree) > 0:
                 agree = True
+
             return dumps({
                 "success" : True,
                 "reviews" : len(r),
                 "queue" : len(q),
                 "backlog" : len(b),
-                "tos" : tos[0],
+                "tos" : t,
                 "invites" : invites,
                 "tosAgree" : agree,
                 "vetted" : user_pass

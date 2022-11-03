@@ -1,0 +1,1 @@
+{"options":{"viewOn":"queue","pipeline":[{"$addFields":{"str_timestamp":{"$toString":"$timestamp"}}},{"$addFields":{"dt_timestamp":{"$dateFromString":{"dateString":"$str_timestamp"}}}}]},"indexes":[],"collectionName":"vw_queue","type":"view"}

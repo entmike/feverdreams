@@ -1,0 +1,1 @@
+{"options":{"viewOn":"queue","pipeline":[{"$addFields":{"source":"queue"}},{"$unionWith":{"pipeline":[{"$addFields":{"source":"pieces"}}],"coll":"pieces"}}]},"indexes":[],"collectionName":"vw_all","type":"view"}

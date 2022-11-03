@@ -1,0 +1,1 @@
+{"options":{"viewOn":"users","pipeline":[{"$addFields":{"user_id_str":{"$toString":"$user_id"}}},{"$project":{"user_info":{"$numberInt":"0"}}}]},"indexes":[],"collectionName":"vw_users","type":"view"}

@@ -131,7 +131,7 @@ export default function MyInvitesPage({isAuthenticated, token, user, myInfo}) {
                       // e.stopPropagation()
                     }}>
                       <Wrap>
-                        <Avatar size='sm' name={invite.userdets.display_name?invite.userdets.display_name:invite.userdets.nickname} src={invite.userdets.picture?invite.userdets.picture:invite.userdets.avatar}>
+                        <Avatar size='sm' name={invite.userdets.nickname} src={invite.userdets.picture}>
                         </Avatar><small style={{color:"#FFF", textShadow: "1px 1px 2px #2a2a2a"}}><strong>{invite.userdets.nickname?invite.userdets.nickname:invite.userdets.display_name}</strong><br/>
                         {dt(invite.redeemed_timestamp)}</small>
                       </Wrap>

@@ -1,0 +1,1 @@
+{"options":{"viewOn":"sanitized_jobs","pipeline":[{"$match":{"status":"archived","nsfw":{"$ne":"yes"}}}]},"indexes":[],"collectionName":"completed_clean","type":"view"}

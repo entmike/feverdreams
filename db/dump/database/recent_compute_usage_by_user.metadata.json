@@ -1,0 +1,1 @@
+{"options":{"viewOn":"vw_queue","pipeline":[{"$match":{"status":"archived","dt_timestamp":{"$gt":{"$date":{"$numberLong":"1659107808080"}}}}},{"$group":{"_id":"$author","duration":{"$sum":"$duration"}}},{"$sort":{"duration":{"$numberInt":"-1"}}},{"$addFields":{"user_id_str":{"$toString":"$_id"}}}]},"indexes":[],"collectionName":"recent_compute_usage_by_user","type":"view"}
