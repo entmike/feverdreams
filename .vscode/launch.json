@@ -1,7 +1,21 @@
 {
     "configurations": [
         {
-            "name": "Python: Flask",
+            "name": "Fever Dreams Development Frontend",
+            "cwd":"${workspaceFolder}/web",
+            "request": "launch",
+            "runtimeArgs": [
+                "run-script",
+                "start"
+            ],
+            "runtimeExecutable": "npm",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+        {
+            "name": "Fever Dreams Development Backend",
             "type": "python",
             "request": "launch",
             "module": "flask",
