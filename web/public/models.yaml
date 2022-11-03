@@ -1,0 +1,498 @@
+256x256_diffusion_uncond:
+  sha: a37c32fffd316cd494cf3f35b339936debdc1576dad13fe57c42399a5dbc78b1
+  sources:
+    - https://clip-as-service.s3.us-east-2.amazonaws.com/discoart/256x256_diffusion_uncond.pt
+    - https://openaipublic.blob.core.windows.net/diffusion/jul-2021/256x256_diffusion_uncond.pt
+    - https://www.dropbox.com/s/9tqnqo930mpnpcn/256x256_diffusion_uncond.pt
+  recommended_size: [ 512, 448 ]
+  config:
+    attention_resolutions: '32, 16, 8'
+    class_cond: false
+    diffusion_steps: 1000
+    image_size: 256
+    learn_sigma: true
+    noise_schedule: linear
+    num_channels: 256
+    num_head_channels: 64
+    num_res_blocks: 2
+    resblock_updown: true
+    rescale_timesteps: true
+    timestep_respacing: 250
+    use_scale_shift_norm: true
+
+512x512_diffusion_uncond_finetune_008100:
+  sha: 9c111ab89e214862b76e1fa6a1b3f1d329b1a88281885943d2cdbe357ad57648
+  sources:
+    - https://clip-as-service.s3.us-east-2.amazonaws.com/discoart/512x512_diffusion_uncond_finetune_008100.pt
+    - https://the-eye.eu/public/AI/models/512x512_diffusion_unconditional_ImageNet/512x512_diffusion_uncond_finetune_008100.pt
+    - https://huggingface.co/lowlevelware/512x512_diffusion_unconditional_ImageNet/resolve/main/512x512_diffusion_uncond_finetune_008100.pt
+  config:
+    attention_resolutions: '32, 16, 8'
+    class_cond: false
+    diffusion_steps: 1000
+    image_size: 512
+    learn_sigma: true
+    noise_schedule: linear
+    num_channels: 256
+    num_head_channels: 64
+    num_res_blocks: 2
+    resblock_updown: true
+    rescale_timesteps: true
+    timestep_respacing: 250
+    use_scale_shift_norm: true
+
+PulpSciFiDiffusion:
+  sha: b79e62613b9f50b8a3173e5f61f0320c7dbb16efad42a92ec94d014f6e17337f
+  sources:
+    - https://clip-as-service.s3.us-east-2.amazonaws.com/discoart/PulpSciFiDiffusion.pt
+    - https://huggingface.co/KaliYuga/PulpSciFiDiffusion/resolve/main/PulpSciFiDiffusion.pt
+  recommended_size: [ 512, 448 ]
+
+pixel_art_diffusion_hard_256:
+  sha: be4a9de943ec06eef32c65a1008c60ad017723a4d35dc13169c66bb322234161
+  sources:
+    - https://clip-as-service.s3.us-east-2.amazonaws.com/discoart/pixel_art_diffusion_hard_256.pt
+    - https://huggingface.co/KaliYuga/pixel_art_diffusion_hard_256/resolve/main/pixel_art_diffusion_hard_256.pt
+  recommended_size: [ 512, 448 ]
+
+pixel_art_diffusion_soft_256:
+  sha: d321590e46b679bf6def1f1914b47c89e762c76f19ab3e3392c8ca07c791039c
+  sources:
+    - https://clip-as-service.s3.us-east-2.amazonaws.com/discoart/pixel_art_diffusion_soft_256.pt
+    - https://huggingface.co/KaliYuga/pixel_art_diffusion_soft_256/resolve/main/pixel_art_diffusion_soft_256.pt
+  recommended_size: [ 512, 448 ]
+
+pixelartdiffusion4k:
+  sha: a1ba4f13f6dabb72b1064f15d8ae504d98d6192ad343572cc416deda7cccac30
+  sources:
+    - https://clip-as-service.s3.us-east-2.amazonaws.com/discoart/pixelartdiffusion4k.pt
+    - https://huggingface.co/KaliYuga/pixelartdiffusion4k/resolve/main/pixelartdiffusion4k.pt
+  recommended_size: [ 512, 448 ]
+
+PADexpanded:
+  sha: a73b40556634034bf43b5a716b531b46fb1ab890634d854f5bcbbef56838739a
+  sources:
+    - https://clip-as-service.s3.us-east-2.amazonaws.com/discoart/PADexpanded.pt
+    - https://huggingface.co/KaliYuga/PADexpanded/resolve/main/PADexpanded.pt
+  recommended_size: [ 512, 448 ]
+
+secondary:
+  sha: 983e3de6f95c88c81b2ca7ebb2c217933be1973b1ff058776b970f901584613a
+  sources:
+    - https://clip-as-service.s3.us-east-2.amazonaws.com/discoart/secondary_model_imagenet_2.pth
+    - https://the-eye.eu/public/AI/models/v-diffusion/secondary_model_imagenet_2.pth
+    - https://ipfs.pollinations.ai/ipfs/bafybeibaawhhk7fhyhvmm7x24zwwkeuocuizbqbcg5nqx64jq42j75rdiy/secondary_model_imagenet_2.pth
+
+watercolordiffusion:
+  sha: a3e6522f0c8f278f90788298d66383b11ac763dd5e0d62f8252c962c23950bd6
+  sources:
+    - https://clip-as-service.s3.us-east-2.amazonaws.com/discoart/watercolordiffusion.pt
+    - https://huggingface.co/KaliYuga/watercolordiffusion/resolve/main/watercolordiffusion.pt
+  recommended_size: [ 512, 448 ]
+
+watercolordiffusion_2:
+  sha: 49c281b6092c61c49b0f1f8da93af9b94be7e0c20c71e662e2aa26fee0e4b1a9
+  sources:
+    - https://clip-as-service.s3.us-east-2.amazonaws.com/discoart/watercolordiffusion_2.pt
+    - https://huggingface.co/KaliYuga/watercolordiffusion_2/resolve/main/watercolordiffusion_2.pt
+  recommended_size: [ 512, 448 ]
+
+256x256_openai_comics_faces_v2.by_alex_spirin_114k:
+  sha: f587fd6d2edb093701931e5083a13ab6b76b3f457b60efd1aa873d60ee3d6388
+  sources:
+    - https://clip-as-service.s3.us-east-2.amazonaws.com/discoart/256x256_openai_comics_faces_v2.by_alex_spirin_114k.pt
+    - https://github.com/Sxela/DiscoDiffusion-Warp/releases/download/v0.1.1/256x256_openai_comics_faces_v2.by_alex_spirin_114k.pt
+  recommended_size: [ 512, 448 ]
+
+portrait_generator_v001_ema_0.9999_1MM:
+  sha: b7e8c747af880d4480b6707006f1ace000b058dd0eac5bb13558ba3752d9b5b9
+  sources:
+    - https://clip-as-service.s3.us-east-2.amazonaws.com/discoart/portrait_generator_v001_ema_0.9999_1MM.pt
+    - https://huggingface.co/felipe3dartist/portrait_generator_v001/resolve/main/portrait_generator_v001_ema_0.9999_1MM.pt
+  config:
+    attention_resolutions: '32, 16, 8'
+    class_cond: false
+    diffusion_steps: 1000
+    image_size: 512
+    learn_sigma: true
+    noise_schedule: linear
+    num_channels: 128
+    num_heads: 4
+    num_res_blocks: 2
+    resblock_updown: true
+    rescale_timesteps: true
+    use_scale_shift_norm: true
+
+portrait_generator_v1.5_ema_0.9999_165000:
+  sha: 3bc39e28fd9690dafbbee83cc08d089a3640eca8ed4d14280c4a9d342c56fd7f
+  sources:
+    - https://huggingface.co/felipe3dartist/portrait_generator_v1.5/resolve/main/ema_0.9999_165000.pt
+  config:
+    attention_resolutions: '32, 16, 8'
+    class_cond: false
+    diffusion_steps: 1000
+    image_size: 512
+    learn_sigma: true
+    noise_schedule: linear
+    num_channels: 128
+    num_heads: 4
+    num_res_blocks: 2
+    resblock_updown: true
+    rescale_timesteps: true
+    use_scale_shift_norm: true
+
+portrait_generator_v003:
+  sha: c0e1739731efe682f6429f2f7f905104b602b415ef8bf0b507034cce6050e8e3
+  sources:
+    - https://huggingface.co/WAS/portrait-diffusion/resolve/main/ema_0.9999_430000.pt
+  config:
+    attention_resolutions: '32, 16, 8'
+    class_cond: false
+    diffusion_steps: 1000
+    image_size: 512
+    learn_sigma: true
+    noise_schedule: linear
+    num_channels: 128
+    num_heads: 4
+    num_res_blocks: 2
+    resblock_updown: true
+    rescale_timesteps: true
+    use_scale_shift_norm: true
+
+portrait_generator_v004:
+  sha: 09daed35b70670b8491f27ef172e2a62f08f3a78326aeb88d23cade1fbb878ab
+  sources:
+    - https://huggingface.co/WAS/portrait-diffusion/resolve/main/ema_0.9999_080000.pt
+  config:
+    attention_resolutions: '32, 16, 8'
+    class_cond: false
+    diffusion_steps: 1000
+    image_size: 512
+    learn_sigma: true
+    noise_schedule: linear
+    num_channels: 128
+    num_heads: 4
+    num_res_blocks: 2
+    resblock_updown: true
+    rescale_timesteps: true
+    use_scale_shift_norm: true
+
+FeiArt_Handpainted_CG_Diffusion:
+  sha: 85f95f0618f288476ffcec9f48160542ba626f655b3df963543388dcd059f86a
+  sources:
+    - https://huggingface.co/Feiart/FeiArt-Handpainted-CG-Diffusion/resolve/main/FeiArt-Handpainted-CG-Diffusion.pt
+  config:
+    attention_resolutions: '32,16,8'
+    class_cond: false
+    diffusion_steps: 1000
+    image_size: 512
+    learn_sigma: true
+    noise_schedule: linear
+    num_channels: 256
+    num_head_channels: 64
+    num_res_blocks: 2
+    resblock_updown: true
+    rescale_timesteps: true
+    timestep_respacing: ddim100
+    use_scale_shift_norm: true
+
+Ukiyo-e_Diffusion_All_V1.by_thegenerativegeneration:
+  sha: 5f9af55461783619f25dcbf8953f028c0768108801860afe8c947428dee7a991
+  sources:
+    - https://huggingface.co/thegenerativegeneration/ukiyoe-diffusion-256/resolve/main/models/ukiyoe-all/v1/ema_0.9999_056000.pt
+  config:
+    attention_resolutions: '32,16,8'
+    class_cond: false
+    diffusion_steps: 1000
+    image_size: 256
+    learn_sigma: true
+    noise_schedule: linear
+    num_channels: 128
+    num_heads: 4
+    num_res_blocks: 2
+    resblock_updown: true
+    rescale_timesteps: true
+    timestep_respacing: ddim100
+    use_scale_shift_norm: true
+
+IsometricDiffusionRevrart512px:
+  sha: 649bb7d10ea5170b71bc24adfb17f0305955fde38d2bb1bc5428c6d5baf9811c
+  sources:
+    - https://huggingface.co/Revrart/IsometricDiffusionRevrart512px/resolve/main/IsometricDiffusionRevrart512px.pt
+  config:
+    attention_resolutions: '32, 16, 8'
+    class_cond: false
+    diffusion_steps: 1000
+    image_size: 512
+    learn_sigma: true
+    noise_schedule: linear
+    num_channels: 256
+    num_head_channels: 64
+    num_res_blocks: 2
+    resblock_updown: true
+    rescale_timesteps: true
+    timestep_respacing: ddim100
+    use_scale_shift_norm: true
+
+liminal_diffusion_v1:
+  sha: 87c36b544a367fceb0ca127d0028cd8a6f6b6e069e529b22999259d69c14f042
+  sources:
+    - https://huggingface.co/BrainArtLabs/liminal_diffusion/resolve/main/liminal_diffusion_v1.pt
+
+floraldiffusion:
+  sha: 197e9068f1ca0248fd89f9d6ca1f6f851783e04fddd0cc5b0020bfa655ed3aeb
+  sources:
+    - https://huggingface.co/jags/floraldiffusion/resolve/main/floraldiffusion.pt
+
+# concept_art_generator_v000-1_alpha:
+#   sha: 0c0394148b4fb56234baee533c36f17202b8f936f28427a957f342aa2f18d040
+#   sources:
+#     - https://huggingface.co/WAS/concept_art_generator/resolve/main/concept_art_generator_v000-1_alpha.pt
+
+512x512_diffusion_uncond_entmike_landscapes_010000:
+  sha: 20ad1df98dfad13d90c11f9cca1e75e2003fa82c37a2a024675842c4f009878f
+  sources:
+    # - https://images.feverdreams.app/models/discoart/512x512_diffusion_uncond_entmike_landscapes_010000.pt  _wget in discoart must not like redirects?
+    - https://s3.amazonaws.com/images.feverdreams.app/models/discoart/512x512_diffusion_uncond_entmike_landscapes_010000.pt
+  config:
+    attention_resolutions: '32, 16, 8'
+    class_cond: false
+    diffusion_steps: 1000
+    image_size: 512
+    learn_sigma: true
+    noise_schedule: linear
+    num_channels: 256
+    num_head_channels: 64
+    num_res_blocks: 2
+    resblock_updown: true
+    rescale_timesteps: true
+    timestep_respacing: 250
+    use_scale_shift_norm: true
+
+512x512_diffusion_uncond_entmike_landscapes_020000:
+  sha: 9ed44c338e50b55e17bffb17cbafccaf10f23d8588bee9b46284eae03fd31b42
+  sources:
+    - https://s3.amazonaws.com/images.feverdreams.app/models/discoart/512x512_diffusion_uncond_entmike_landscapes_020000.pt
+  config:
+    attention_resolutions: '32, 16, 8'
+    class_cond: false
+    diffusion_steps: 1000
+    image_size: 512
+    learn_sigma: true
+    noise_schedule: linear
+    num_channels: 256
+    num_head_channels: 64
+    num_res_blocks: 2
+    resblock_updown: true
+    rescale_timesteps: true
+    timestep_respacing: 250
+    use_scale_shift_norm: true
+
+512x512_diffusion_uncond_entmike_landscapes_070000:
+  sha: 5de70fc6c4425629206812b850d47b25318cc04effc3d1902d82ce1ba4220a0b
+  sources:
+    - https://s3.amazonaws.com/images.feverdreams.app/models/discoart/512x512_diffusion_uncond_entmike_landscapes_070000.pt
+  config:
+    attention_resolutions: '32, 16, 8'
+    class_cond: false
+    diffusion_steps: 1000
+    image_size: 512
+    learn_sigma: true
+    noise_schedule: linear
+    num_channels: 256
+    num_head_channels: 64
+    num_res_blocks: 2
+    resblock_updown: true
+    rescale_timesteps: true
+    timestep_respacing: 250
+    use_scale_shift_norm: true
+
+512x512_diffusion_uncond_entmike_landscapes_130000:
+  sha: 42dcc43b47174633371e7570c4165840a826b1dce2a00e507b2ee864dc6dc842
+  sources:
+    - https://s3.amazonaws.com/images.feverdreams.app/models/discoart/512x512_diffusion_uncond_entmike_landscapes_130000.pt
+  config:
+    attention_resolutions: '32, 16, 8'
+    class_cond: false
+    diffusion_steps: 1000
+    image_size: 512
+    learn_sigma: true
+    noise_schedule: linear
+    num_channels: 256
+    num_head_channels: 64
+    num_res_blocks: 2
+    resblock_updown: true
+    rescale_timesteps: true
+    timestep_respacing: 250
+    use_scale_shift_norm: true
+
+PaintPourDiffusion_v1.0:
+  sha: cfcb98b926ef3b2a0141f2a84ed102db5a0f9356e2c8f4a82053a4c6d62e3eb7
+  sources:
+    - https://huggingface.co/EclecticBeams/PaintPour_diffusion/resolve/main/paintpour_v1.0_ema_0.9999_031000.pt
+  config:
+    attention_resolutions: '32, 16, 8'
+    class_cond: false
+    diffusion_steps: 1000
+    image_size: 256
+    learn_sigma: true
+    noise_schedule: linear
+    num_channels: 256
+    num_head_channels: 64
+    num_res_blocks: 2
+    resblock_updown: true
+    rescale_timesteps: true
+    timestep_respacing: 250
+    use_scale_shift_norm: true
+
+PaintPourDiffusion_v1.1:
+  sha: c0c31719780589050fe74bb815629b927a7b48655501a6346bd24cd1eb8e587d
+  sources:
+    - https://huggingface.co/EclecticBeams/PaintPour_diffusion/resolve/main/paintpour_v1.1_ema_0.9999_071000.pt
+  config:
+    attention_resolutions: '32, 16, 8'
+    class_cond: false
+    diffusion_steps: 1000
+    image_size: 256
+    learn_sigma: true
+    noise_schedule: linear
+    num_channels: 128
+    num_heads: 4
+    num_res_blocks: 2
+    resblock_updown: true
+    rescale_timesteps: true
+    timestep_respacing: 250
+    use_scale_shift_norm: true
+
+PaintPourDiffusion_v1.2:
+  sha: 09f2cb0da67800dd5c605f7b2d7bdfd353b7e7ba20c03a52b9a3c8fe792f79fd
+  sources:
+    - https://huggingface.co/EclecticBeams/PaintPour_diffusion/resolve/main/paintpour_v1.2_ema_0.9999_032000.pt
+  config:
+    attention_resolutions: '32, 16, 8'
+    class_cond: false
+    diffusion_steps: 1000
+    image_size: 256
+    learn_sigma: true
+    noise_schedule: linear
+    num_channels: 128
+    num_heads: 4
+    num_res_blocks: 2
+    resblock_updown: true
+    rescale_timesteps: true
+    timestep_respacing: 250
+    use_scale_shift_norm: true
+
+PaintPourDiffusion_v1.3:
+  sha: 01438a591c46a5adab63afb98e9d79856634557da0cdf0d2ad7d8fba9ecb377e
+  sources:
+    - https://huggingface.co/EclecticBeams/PaintPour_diffusion/resolve/main/paintpour_v1.3_ema_0.9999_064000.pt
+  config:
+    attention_resolutions: '32, 16, 8'
+    class_cond: false
+    diffusion_steps: 1000
+    image_size: 256
+    learn_sigma: true
+    noise_schedule: linear
+    num_channels: 128
+    num_heads: 4
+    num_res_blocks: 2
+    resblock_updown: true
+    rescale_timesteps: true
+    timestep_respacing: 250
+    use_scale_shift_norm: true
+
+512x512_diffusion_uncond_entmike_ffhq_025000:
+  sha: d82b6856697eeea0370b82b2c8b4a2726c4df401070e693c5e85e836cdfe5742
+  sources:
+    - https://s3.amazonaws.com/images.feverdreams.app/models/discoart/512x512_diffusion_uncond_entmike_ffhq_025000.pt
+  config:
+    attention_resolutions: '32, 16, 8'
+    class_cond: false
+    diffusion_steps: 1000
+    image_size: 512
+    learn_sigma: true
+    noise_schedule: linear
+    num_channels: 256
+    num_head_channels: 64
+    num_res_blocks: 2
+    resblock_updown: true
+    rescale_timesteps: true
+    timestep_respacing: 250
+    use_scale_shift_norm: true
+
+512x512_diffusion_uncond_entmike_ffhq_145000:
+  sha: a6885cd38b7486c4fd9ba8da5c3a3ae10397b3ebfd6c5db70b615bcfdd017da8
+  sources:
+    - https://s3.amazonaws.com/images.feverdreams.app/models/discoart/512x512_diffusion_uncond_entmike_ffhq_145000.pt
+  config:
+    attention_resolutions: '32, 16, 8'
+    class_cond: false
+    diffusion_steps: 1000
+    image_size: 512
+    learn_sigma: true
+    noise_schedule: linear
+    num_channels: 256
+    num_head_channels: 64
+    num_res_blocks: 2
+    resblock_updown: true
+    rescale_timesteps: true
+    timestep_respacing: 250
+    use_scale_shift_norm: true
+
+512x512_diffusion_uncond_entmike_ffhq_260000:
+  sha: c9f12db8a74df6411e8b3ae59d4a3daaeaf1c641d2860dfed73485d213b986e6
+  sources:
+    - https://s3.amazonaws.com/images.feverdreams.app/models/discoart/512x512_diffusion_uncond_entmike_ffhq_260000.pt
+  config:
+    attention_resolutions: '32, 16, 8'
+    class_cond: false
+    diffusion_steps: 1000
+    image_size: 512
+    learn_sigma: true
+    noise_schedule: linear
+    num_channels: 256
+    num_head_channels: 64
+    num_res_blocks: 2
+    resblock_updown: true
+    rescale_timesteps: true
+    timestep_respacing: 250
+    use_scale_shift_norm: true
+
+512x512_diffusion_uncond_entmike_ffhq_470000:
+  sha: e524dc22297b9b0e851723c0465ec4106ec3ad9fcaaeeaf5591ea308e0c4b25d
+  sources:
+    - https://s3.amazonaws.com/images.feverdreams.app/models/discoart/512x512_diffusion_uncond_entmike_ffhq_470000.pt
+  config:
+    attention_resolutions: '32, 16, 8'
+    class_cond: false
+    diffusion_steps: 1000
+    image_size: 512
+    learn_sigma: true
+    noise_schedule: linear
+    num_channels: 256
+    num_head_channels: 64
+    num_res_blocks: 2
+    resblock_updown: true
+    rescale_timesteps: true
+    timestep_respacing: 250
+    use_scale_shift_norm: true
+
+512x512_diffusion_uncond_entmike_ffhq_605000:
+  sha: 7ebf5cd1666e618b3bee7f687fbec4b175668add0645954cf5502b01bb92e028
+  sources:
+    - https://s3.amazonaws.com/images.feverdreams.app/models/discoart/512x512_diffusion_uncond_entmike_ffhq_605000.pt
+  config:
+    attention_resolutions: '32, 16, 8'
+    class_cond: false
+    diffusion_steps: 1000
+    image_size: 512
+    learn_sigma: true
+    noise_schedule: linear
+    num_channels: 256
+    num_head_channels: 64
+    num_res_blocks: 2
+    resblock_updown: true
+    rescale_timesteps: true
+    timestep_respacing: 250
+    use_scale_shift_norm: true
