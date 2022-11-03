@@ -26,6 +26,7 @@ import {
   
 export const DiscoPiece = (props) =>{
     let {piece, isAuthenticated, user, token, onDecided, onChange} = props
+    const IMAGE_HOST = process.env.REACT_APP_images_url
     const toast = useToast()
     const { loginWithRedirect } = useAuth0()
     const [isLoading, setIsLoading] = useState(false)
@@ -75,7 +76,7 @@ export const DiscoPiece = (props) =>{
               <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
                 <Image
                   borderRadius="lg"
-                  src={`http://images.feverdreams.app/thumbs/512/${piece.preferredImage || piece.uuid}.jpg`}
+                  src={`${IMAGE_HOST}/thumbs/512/${piece.preferredImage || piece.uuid}.jpg`}
                   alt={piece.uuid}
                   objectFit="contain"
                 />

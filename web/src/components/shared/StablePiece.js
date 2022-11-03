@@ -30,6 +30,7 @@ import {
   
 export const StablePiece = (props) =>{
     let {isAuthenticated, user, token, onDecided, onChange, permissions} = props
+    const IMAGE_HOST = process.env.REACT_APP_images_url
     let p = props.piece
     const toast = useToast()
     const patronDisclosure = useDisclosure()
@@ -89,7 +90,7 @@ export const StablePiece = (props) =>{
               <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
                 <Image
                   borderRadius="lg"
-                  src={`http://images.feverdreams.app/thumbs/512/${piece.preferredImage || piece.uuid}.jpg`}
+                  src={`${IMAGE_HOST}/thumbs/512/${piece.preferredImage || piece.uuid}.jpg`}
                   alt={piece.uuid}
                   objectFit="contain"
                 />

@@ -71,7 +71,7 @@ import { PreviewDrawer } from '../shared/PreviewDrawer';
 import { dt } from '../../utils/dateUtils';
 
 function PiecePage({ isAuthenticated, token, user}) {
-  const IMAGE_HOST = 'https://images.feverdreams.app';
+  const IMAGE_HOST = process.env.REACT_APP_images_url
   const { loginWithRedirect } = useAuth0();
   const [data, setData] = useState(null);
   const [augmentation, setAugmentation] = useState(null);
@@ -695,7 +695,7 @@ function PiecePage({ isAuthenticated, token, user}) {
                         (data.algo === "disco")?data.discoart_tags?data.discoart_tags.text_prompts:"ERROR":"ERROR"
                       }
                       objectFit="cover"
-                      src={`http://images.feverdreams.app/jpg/${image.hash}.jpg`
+                      src={`${IMAGE_HOST}/jpg/${image.hash}.jpg`
                       }
                     />
                   </Link>

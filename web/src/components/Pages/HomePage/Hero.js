@@ -16,6 +16,7 @@ import { FaTwitter, FaYoutube, FaInstagram, FaPatreon } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
 import { Stats } from './Stats.js';
 export function Hero({isAuthenticated, token, user}) {
+  const IMAGE_HOST = process.env.REACT_APP_images_url
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -69,7 +70,7 @@ export function Hero({isAuthenticated, token, user}) {
           transformOrigin: "50% 50%"
         }}
         objectFit="contain"
-        src="https://images.feverdreams.app/jpg/e61688efecd603911360860957e50b783aee6b0917d920a720451ba6928303db.jpg"
+        src={`${IMAGE_HOST}/jpg/e61688efecd603911360860957e50b783aee6b0917d920a720451ba6928303db.jpg`}
       />
       <Stats />
     </Box>

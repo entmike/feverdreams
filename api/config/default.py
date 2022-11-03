@@ -1,8 +1,11 @@
-UPLOAD_FOLDER="images"
+UPLOAD_FOLDER="../images"
 PROFANITY_THRESHOLD=0.8
 STEP_LIMIT=500
 AUTHOR_LIMIT=100
-MONGODB_CONNECTION="mongodb://192.168.1.12"
+MONGODB_CONNECTION="mongodb://192.168.1.12:27018"
 MAX_DREAM_OCCURENCE=20
 AUTH0_DOMAIN="dev-yqzsn326.auth0.com"
 AUTH0_API_AUDIENCE="https://api.feverdreams.app/"
+BOT_USE_S3=True
+BOT_S3_BUCKET="devimages.feverdreams.app"
+BOT_S3_WEB="http://devimages.feverdreams.app.s3-website-us-east-1.amazonaws.com/images/"

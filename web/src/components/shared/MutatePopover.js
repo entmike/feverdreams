@@ -69,6 +69,7 @@ import { VscSettings } from 'react-icons/vsc';
 import { BsDice3 } from 'react-icons/bs';
 
 export function MutatePopover(props) {
+  const IMAGE_HOST = process.env.REACT_APP_images_url
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [showTooltip, setShowTooltip] = useState(false)
   const loginDisclosure = useDisclosure()
@@ -222,7 +223,7 @@ export function MutatePopover(props) {
         <ModalBody>
           <Image
             borderRadius="lg"
-            src={`http://images.feverdreams.app/thumbs/512/${dataCopy.preferredImage || piece.uuid}.jpg`}
+            src={`${IMAGE_HOST}/thumbs/512/${dataCopy.preferredImage || piece.uuid}.jpg`}
             alt={piece.uuid}
             objectFit="contain"
           />

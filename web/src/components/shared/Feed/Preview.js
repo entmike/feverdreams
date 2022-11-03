@@ -6,6 +6,7 @@ import { ReviewOverlay } from './ReviewOverlay';
 import { useState, useEffect } from 'react';
 export function Preview({piece, isAuthenticated, token, user, mode, onDecided, account}) {
   const [isInterested, setIsInterested] = useState(false);
+  const IMAGE_HOST = process.env.REACT_APP_images_url
   const navigate = useNavigate()
   if(!mode) mode = "preview"
   function touchover(){
@@ -30,7 +31,7 @@ export function Preview({piece, isAuthenticated, token, user, mode, onDecided, a
       onMouseOver={over}
       onMouseOut={out}>
       <Image
-        src={`http://images.feverdreams.app/thumbs/512/${piece.preferredImage || piece.uuid}.jpg`}
+        src={`${IMAGE_HOST}/thumbs/512/${piece.preferredImage || piece.uuid}.jpg`}
         alt={piece.uuid}
         transition="0.2s ease-in-out"
         // objectFit="contain"

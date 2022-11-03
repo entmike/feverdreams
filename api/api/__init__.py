@@ -42,6 +42,7 @@ from .security import myinfo, mypermissions
 from .personal import myfavorites, personalfeed, myreviews, deletedfeed, myinvites, myjobs
 from .widgets import tags, user, job, gpustats, queue
 from .actions import follow, reportnsfw, pin, review, delete, undelete, create, review_personal, rolldice, update
+from .worker import takeorder, deliverorder, reject, register
 
 app = Flask(__name__, instance_relative_config=True)
 # Load the default configuration
@@ -93,3 +94,9 @@ app.register_blueprint(create.blueprint)
 app.register_blueprint(update.blueprint)
 app.register_blueprint(delete.blueprint)
 app.register_blueprint(rolldice.blueprint)
+
+# Worker
+app.register_blueprint(takeorder.blueprint)
+app.register_blueprint(deliverorder.blueprint)
+app.register_blueprint(reject.blueprint)
+app.register_blueprint(register.blueprint)

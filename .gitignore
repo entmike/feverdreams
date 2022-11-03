@@ -1,3 +1,5 @@
+worker/*
+
 # Logs
 logs
 *.log

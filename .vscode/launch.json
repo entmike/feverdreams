@@ -16,11 +16,12 @@
         },
         {
             "name": "Fever Dreams Development Backend",
+            "cwd":"${workspaceFolder}/api",
             "type": "python",
             "request": "launch",
             "module": "flask",
             "env": {
-                "FLASK_APP": "api/api.py",
+                "FLASK_APP": "api.py",
                 "FLASK_DEBUG": "1"
             },
             "args": [
