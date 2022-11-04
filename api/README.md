@@ -22,8 +22,8 @@ pip install -r requirements.txt
 
 ## Initial Configuration
 
-- Adjust `config/default.py` to match your environment configuration.
-- Create `instance/config.py` to store your secrets/tokens/credentials.  Refer to `exampleconfig.py` for details.
+- Adjust environment variables used in `config/default.py`
+- Adjust environment variables used in `instance/config.py`
 
 ## Run/Debug Locally
 
@@ -35,4 +35,16 @@ flask --debug --app api.py run
 
 ```sh
 gunicorn -b 0.0.0.0:8080 --workers=15 --threads 2 --backlog 2048 --worker-connections 1000 api:app
+```
+
+## Run in Docker
+```sh
+docker run -it --rm -p 8080:8080 \
+    -e BOT_SALT="SaltPhrase" \
+    -e BOT_AWS_SERVER_PUBLIC_KEY="YOURAMAZONPUBLICKEY" \
+    -e BOT_AWS_SERVER_SECRET_KEY="YourAmazonSecretKey" \
+    -e AUTH0_MGMT_API_CLIENT_ID="YourAuth0ClientId" \
+    -e AUTH0_MGMT_API_SECRET="YourAuto0Secret" \
+    -e MONGODB_CONNECTION="mongodb://yourmongohost:27017" \
+    entmike/fdapi bash -c "gunicorn -b 0.0.0.0:8080 --workers=15 --threads 2 --backlog 2048 --worker-connections 1000 api:app"
 ```
