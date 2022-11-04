@@ -11,3 +11,4 @@ RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requ
 WORKDIR /app
 COPY . /app/feverdreams/api
 WORKDIR /app/feverdreams/api
+RUN mkdir /app/feverdreams/images

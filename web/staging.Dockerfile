@@ -8,4 +8,4 @@ WORKDIR /app
 COPY . /app/feverdreams/web
 WORKDIR /app/feverdreams/web
 RUN npm i --force
-RUN npm run build:production
+RUN npm run build:staging

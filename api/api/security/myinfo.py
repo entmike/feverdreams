@@ -1,6 +1,6 @@
 # myinfo.py
 
-from flask import Blueprint, render_template, current_app, _request_ctx_stack
+from flask import Blueprint, render_template, current_app, _request_ctx_stack, request
 from datetime import datetime, timedelta
 from bson.json_util import dumps
 from loguru import logger

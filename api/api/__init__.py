@@ -37,12 +37,15 @@ from flask import _request_ctx_stack
 from colorthief import ColorThief
 # from .utils.auth_utils import *
 from .landingpage import landingpage
-from .feeds import popular, recentlikes, recent, random, userfeed, following
+from .feeds import popular, recentlikes, recent, random, userfeed, following, related
 from .security import myinfo, mypermissions
 from .personal import myfavorites, personalfeed, myreviews, deletedfeed, myinvites, myjobs
 from .widgets import tags, user, job, gpustats, queue
 from .actions import follow, reportnsfw, pin, review, delete, undelete, create, review_personal, rolldice, update, cancel, retry
 from .worker import takeorder, deliverorder, reject, register
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__, instance_relative_config=True)
 # Load the default configuration
@@ -64,6 +67,7 @@ app.register_blueprint(gpustats.blueprint)
 app.register_blueprint(queue.blueprint)
 
 # Feeds
+app.register_blueprint(related.blueprint)
 app.register_blueprint(recent.blueprint)
 app.register_blueprint(recentlikes.blueprint)
 app.register_blueprint(random.blueprint)
