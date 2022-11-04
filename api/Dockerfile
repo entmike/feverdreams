@@ -9,6 +9,5 @@ COPY requirements.txt /tmp/pip-tmp/
 RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt && rm -rf /tmp/pip-tmp
 
 WORKDIR /app
-ENV cachebust=1
-RUN git clone https://github.com/entmike/feverdreams.git
+COPY . /app/feverdreams/api
 WORKDIR /app/feverdreams/api
