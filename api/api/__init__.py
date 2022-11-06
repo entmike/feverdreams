@@ -41,7 +41,7 @@ from .feeds import popular, recentlikes, recent, random, userfeed, following, re
 from .security import myinfo, mypermissions
 from .personal import myfavorites, personalfeed, myreviews, deletedfeed, myinvites, myjobs
 from .widgets import tags, user, job, gpustats, queue
-from .actions import follow, reportnsfw, pin, review, delete, undelete, create, review_personal, rolldice, update, cancel, retry
+from .actions import follow, reportnsfw, pin, review, delete, undelete, create, review_personal, rolldice, update, cancel, retry, tosagree
 from .worker import takeorder, deliverorder, reject, register
 from dotenv import load_dotenv
 
@@ -100,6 +100,7 @@ app.register_blueprint(delete.blueprint)
 app.register_blueprint(cancel.blueprint)
 app.register_blueprint(retry.blueprint)
 app.register_blueprint(rolldice.blueprint)
+app.register_blueprint(tosagree.blueprint)
 
 # Worker
 app.register_blueprint(takeorder.blueprint)
